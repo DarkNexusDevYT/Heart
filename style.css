@@ -1,0 +1,52 @@
+body {
+  background-color: #000000;
+}
+
+.cuore {
+  position: absolute;
+  background-color: #D7342A;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: pulse 1s infinite;
+}
+
+.cuore::after {
+  background-color: #D7342A;
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 75px;
+  border-radius: 50%; 
+}
+
+.cuore::before {
+  background-color: #D7342A;
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -75px;
+  left: 0;
+  border-radius: 50%; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95) rotate(-45deg);
+  }
+
+  70% {
+    transform: scale(1.05) rotate(-45deg);
+  }
+
+  100% {
+    transform: scale(0.95) rotate(-45deg);
+  }
+}
